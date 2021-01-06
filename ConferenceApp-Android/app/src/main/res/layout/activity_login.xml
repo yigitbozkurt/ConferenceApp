@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.LoginActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6"
+        android:id="@+id/guide6"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guide6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/login_bg"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_dashboard_white"
+        app:layout_constraintBottom_toTopOf="@id/linearAppName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        android:id="@+id/imgIcon"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/cardLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp"
+        android:id="@+id/linearAppName">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONFERENCE"
+            android:fontFamily="@font/century_gothic_bold"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textAllCaps="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" APP"
+            android:fontFamily="@font/century_gothic"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textAllCaps="true"/>
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="3dp"
+        android:clipToPadding="false"
+        android:id="@+id/cardLogin"
+        android:layout_marginHorizontal="24dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="48dp"
+            android:paddingHorizontal="24dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="3dp"
+                android:clipToPadding="false"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/cardEmail">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:fontFamily="@font/century_gothic"
+                    android:hint="E Posta Adresi"
+                    android:maxLines="1"
+                    android:maxLength="255"
+                    android:inputType="textEmailAddress"
+                    android:digits="abcdefghijklmnopqrstuvwxyz1234567890_-.@"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="16dp"
+                    android:textColorHint="@color/gray"
+                    android:drawableLeft="@drawable/ic_user"
+                    android:drawablePadding="16dp"
+                    android:id="@+id/editEmail" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="3dp"
+                android:clipToPadding="false"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/cardEmail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/cardPassword"
+                app:cardUseCompatPadding="true"
+                android:layout_marginTop="16dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:fontFamily="@font/century_gothic"
+                    android:hint="Şifre"
+                    android:maxLines="1"
+                    android:maxLength="16"
+                    android:inputType="textPassword"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="16dp"
+                    android:textColorHint="@color/gray"
+                    android:drawableLeft="@drawable/ic_key"
+                    android:drawablePadding="16dp"
+                    android:id="@+id/editPassword"/>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cardLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        android:id="@+id/btnLogin"
+        android:text="GİRİŞ YAP"
+        android:letterSpacing="0.01"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/century_gothic_bold"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:id="@+id/labelRegister"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/century_gothic"
+            android:textStyle="normal"
+            android:textSize="15sp"
+            android:textColor="@color/gray"
+            android:lineSpacingExtra="1sp"
+            android:gravity="center_horizontal"
+            android:text="Hesabın yok mu? "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/century_gothic_bold"
+            android:textStyle="normal"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:lineSpacingExtra="1sp"
+            android:gravity="center_horizontal"
+            android:text="Kaydol"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

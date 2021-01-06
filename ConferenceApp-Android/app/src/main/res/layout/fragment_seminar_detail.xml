@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.main.ui.seminar_detail.SeminarDetailFragment"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:id="@+id/main_media_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:background="#000000">
+
+        <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+            android:id="@+id/video_player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_dark"
+            android:gravity="center"
+            app:controller_layout_id="@layout/custom_control_view"
+            app:fastforward_increment="10000"
+            app:hide_on_touch="true"
+            app:player_layout_id="@layout/exo_simple_playerview"
+            app:resize_mode="fixed_height"
+            app:rewind_increment="10000"
+            app:use_controller="true" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="12dp"
+                android:id="@+id/cardProfile">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/textTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="#585857"
+                        android:text="Title"
+                        android:maxLines="2"
+                        android:fontFamily="@font/century_gothic_bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/textDate"
+                        android:layout_marginRight="16dp" />
+
+                    <TextView
+                        android:id="@+id/textDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="@color/black_text2"
+                        android:fontFamily="@font/century_gothic"
+                        android:text="Description"
+                        app:layout_constraintTop_toBottomOf="@id/textTitle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="2dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_location"
+                        app:layout_constraintTop_toTopOf="@id/textLocation"
+                        app:layout_constraintBottom_toBottomOf="@id/textLocation"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:id="@+id/imgLocation"/>
+                    <TextView
+                        android:id="@+id/textLocation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/black_text3"
+                        android:fontFamily="@font/century_gothic"
+                        android:text="İstanbul"
+                        app:layout_constraintTop_toBottomOf="@id/textDescription"
+                        app:layout_constraintStart_toEndOf="@id/imgLocation"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="4dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/labelSpeaker"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="#585857"
+                        android:text="Konuşmacı"
+                        android:maxLines="2"
+                        android:fontFamily="@font/century_gothic_bold"
+                        app:layout_constraintTop_toBottomOf="@id/textLocation"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/textDate"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:id="@+id/textDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="@color/black_text3"
+                        android:fontFamily="@font/century_gothic"
+                        android:text="20.12.2020"
+                        app:layout_constraintTop_toTopOf="@id/textTitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+
+                    <ImageView
+                        android:id="@+id/imgSpeaker"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/labelSpeaker"
+                        android:layout_marginTop="8dp"/>
+
+                    <TextView
+                        android:id="@+id/textSpeaker"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Onur Barman"
+                        android:textColor="#474747"
+                        android:fontFamily="@font/century_gothic"
+                        android:maxLines="1"
+                        app:layout_constraintTop_toTopOf="@id/imgSpeaker"
+                        app:layout_constraintBottom_toBottomOf="@id/imgSpeaker"
+                        app:layout_constraintStart_toEndOf="@id/imgSpeaker"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginLeft="16dp"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:text="KAYDOL"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/century_gothic_bold"
+                        android:textSize="15sp"
+                        app:layout_constraintTop_toBottomOf="@id/imgSpeaker"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="16dp"
+                        android:id="@+id/btnRegister"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

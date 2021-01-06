@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F92601</color>
+    <color name="colorPrimaryDark">#F92601</color>
+    <color name="colorAccent">#FFDDD7</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#77838F</color>
+    <color name="seminar_speaker_color">#ACA9A9</color>
+
+    <color name="black_text1">#474747</color>
+    <color name="black_text2">#454545</color>
+    <color name="black_text3">#545454</color>
+</resources>

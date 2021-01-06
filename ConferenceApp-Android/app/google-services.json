@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "384131585667",
+    "project_id": "conferenceapp-75b52",
+    "storage_bucket": "conferenceapp-75b52.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384131585667:android:50541dd3118e3a905f6db6",
+        "android_client_info": {
+          "package_name": "com.yigit.conferenceapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "384131585667-eeskm6hhvleiqt2tjtb110c1krj6scmc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLWPZ_wz1rR0W9eX4Cbu5svzZp4Xs_CSE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "384131585667-eeskm6hhvleiqt2tjtb110c1krj6scmc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

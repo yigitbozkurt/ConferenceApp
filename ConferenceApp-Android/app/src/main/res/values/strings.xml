@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SeminerApp</string>
+    <string name="title_home">Anasayfa</string>
+    <string name="title_planner">Ajandam</string>
+    <string name="title_profile">Profilim</string>
+
+    <string name="error_gif">Dosya boyutu %1$sM dan düşük olmalıdır.</string>
+    <string name="alert_loading">Yükleniyor..</string>
+    <string name="alert_exit_title">Uygulama Kapatılacak!</string>
+    <string name="alert_exit_subtitle">Uygulamadan çıkmak istiyor musunuz?</string>
+    <string name="alert_exit_confirm">Çıkış</string>
+    <string name="alert_exit_cancel">İptal</string>
+</resources>
